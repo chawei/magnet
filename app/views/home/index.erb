@@ -1,0 +1,13 @@
+<div id="counter">
+  <%= @count %>
+</div>
+
+
+
+<% content_for :foot do %>
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+      setInterval("getCountNum()", 500);
+    });
+  </script>
+<% end %>

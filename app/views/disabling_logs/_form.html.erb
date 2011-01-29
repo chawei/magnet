@@ -1,0 +1,33 @@
+<%= form_for(@disabling_log) do |f| %>
+  <% if @disabling_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@disabling_log.errors.count, "error") %> prohibited this disabling_log from being saved:</h2>
+
+      <ul>
+      <% @disabling_log.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :button_count %><br />
+    <%= f.text_field :button_count %>
+  </div>
+  <div class="field">
+    <%= f.label :button_type %><br />
+    <%= f.text_field :button_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

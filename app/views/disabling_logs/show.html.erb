@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @disabling_log.title %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @disabling_log.url %>
+</p>
+
+<p>
+  <b>Button count:</b>
+  <%= @disabling_log.button_count %>
+</p>
+
+<p>
+  <b>Button type:</b>
+  <%= @disabling_log.button_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_disabling_log_path(@disabling_log) %> |
+<%= link_to 'Back', disabling_logs_path %>

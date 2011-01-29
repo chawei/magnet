@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  url: MyString
+  button_count: 1
+  button_type: MyString
+
+two:
+  title: MyString
+  url: MyString
+  button_count: 1
+  button_type: MyString

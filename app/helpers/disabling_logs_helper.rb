@@ -1,0 +1,2 @@
+module DisablingLogsHelper
+end

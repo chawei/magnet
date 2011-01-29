@@ -7,6 +7,8 @@ class DisablingLogsController < ApplicationController
 
     respond_to do |format|
       if @disabling_log.save
+        expire_page :action => :count, :format => :json
+        
         format.html { redirect_to(@disabling_log, :notice => 'Disabling log was successfully created.') }
         format.json { render :json => { :status => 'ok' } }
       else

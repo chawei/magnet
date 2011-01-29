@@ -1,4 +1,6 @@
 class DisablingLogsController < ApplicationController
+  caches_page :count
+  
   def add
     return if params[:authenticity_token] != "ogoKH6Gei/sAnYtsK2WIhuFAZVmahD7eBCtrrQswoD4="
     @disabling_log = DisablingLog.new(params[:disabling_log])
@@ -67,6 +69,8 @@ class DisablingLogsController < ApplicationController
 
     respond_to do |format|
       if @disabling_log.save
+        expire_page :action => :count, :format => :json
+        
         format.html { redirect_to(@disabling_log, :notice => 'Disabling log was successfully created.') }
         format.xml  { render :xml => @disabling_log, :status => :created, :location => @disabling_log }
       else

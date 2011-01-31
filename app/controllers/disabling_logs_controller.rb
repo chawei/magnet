@@ -22,7 +22,7 @@ class DisablingLogsController < ApplicationController
     @count = DisablingLog.total_count
     
     respond_to do |format|
-      format.json  { render :json => { :count => @count } }
+      format.json  { render :json => { :count => display_count(@count) } }
     end
   end
   

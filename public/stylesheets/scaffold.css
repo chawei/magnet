@@ -1,7 +1,17 @@
-body { background-color: #fff; color: #333; }
+/* General
+ *
+ *
+ */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+body { background-color: #fff; color: #666; margin: 0; padding: 0; }
 
 body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
 }
@@ -12,7 +22,7 @@ pre {
   font-size: 11px;
 }
 
-a { color: #000; }
+a { color: #666; }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 
@@ -53,4 +63,18 @@ div.field, div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+
+
+.clear_fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* IE7 Hack */
+.clear_fix {
+  clear: both;
+  *display: inline-block;
 }

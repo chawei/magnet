@@ -7,9 +7,28 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <div id="header" class="clear_fix">
+    <div id="logo"># LIKE DISABLED</div>
+    <div id="counter">
+      <%= @count %>
+    </div>
+  </div>
+  
+  <div id="main_container">
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>
 
-<%= yield %>
+  <div id="footer">
+    
+  </div>
 
-<%= yield :foot %>
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+      setInterval("getCountNum()", 2000);
+    });
+  </script>
+  <%= yield :foot %>
 </body>
 </html>

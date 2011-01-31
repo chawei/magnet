@@ -31,22 +31,36 @@
   }
   .section_content {
     float: left;
-  }
-  
-#video_container {
-  padding: 5px;
-  margin: 0 10px 0 0;
+  }  
+
+#about_section .bottom_container {
+	margin: 20px 0 20px 0;
 }
-#quote {
-  font-size: 20px;
-  padding: 10px;
-}
+	#video_container {
+	  padding: 10px;
+		margin: 0 10px 0 0;
+	}
+
+	#video_container .description {
+		font-size: 0.9em;
+		padding-top: 5px;
+	}
+
+	#quote {
+	  font-size: 20px;
+	  padding: 10px;
+		width: 300px;
+		line-height: 30px;
+	}
+		#quote .author {
+			font-size: 16px;
+		}
   
 .without_bgcolor {
   background: none;
 }
 .with_bgcolor {
-  background-color: #ffff83;
+  background-color: #fff;
 }
 
 .left {

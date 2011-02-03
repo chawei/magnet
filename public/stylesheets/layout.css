@@ -1,6 +1,6 @@
 #header {
   margin: 0 auto;
-  width: 900px;
+  width: 825px;
   padding: 20px 0;
 }
   #logo {
@@ -25,14 +25,17 @@
   }
 
 .section_container {
-  background-color: #ffff83;
+  background-color: #fff;
   margin: 0 0 10px 0;
-  padding: 10px 0;
+  padding: 20px 0;
 }
   .section {
     margin: 0 auto;
-    width: 900px;
+    width: 825px;
   }
+		.section .left_col {
+			width: 500px;
+		}
   .section_title {
     float: left;
     font-weight: bold;
@@ -43,29 +46,41 @@
     float: left;
   }  
 
-#about_section .bottom_container {
-	margin: 20px 0 20px 0;
+#video_container {
+	position: relative;
+	width: 463px;
+	margin-top: 8px;
 }
-	#video_container {
-	  padding: 10px;
-		margin: 0 10px 0 0;
-	}
 
-	#video_container .description {
-		font-size: 0.9em;
-		padding-top: 5px;
-	}
+#video {
+	margin: 0 10px 0 0;
+}
 
-	#quote {
-	  font-size: 20px;
-	  padding: 10px;
-		width: 300px;
-		line-height: 30px;
+#video_container .video_desc {
+	position: absolute;
+	right: 0px;
+	bottom: -2px;
+	font-size: 0.9em;
+}
+
+#quote {
+  font-size: 1.3em;
+	width: 270px;
+	line-height: 30px;
+	margin-top: 25px;
+}
+	#quote .author {
+		font-size: 16px;
 	}
-		#quote .author {
-			font-size: 16px;
-		}
+		
+#magnet_image {
+	margin: 30px 0 28px 0;
+}
   
+#magnet_download {
+	
+}
+
 .without_bgcolor {
   background: none;
 }
@@ -75,4 +90,7 @@
 
 .left {
   float: left;
+}
+.right {
+	float: right;
 }

@@ -5,17 +5,13 @@
 * {
   margin: 0;
   padding: 0;
-/*  font-family: Helvetica, sans-serif;*/
-	font-family: 'Arvo', arial, serif;
+	font-family: 'Inconsolata', Lucida Console, monospace;
 }
 
-/*h1 { font-family: 'Neucha', arial, serif; }*/
-
-body { background-color: #fff; color: #8E8E8E; margin: 0; padding: 0; }
+body { background-color: #CFCFCF; color: #8E8E8E; margin: 0; padding: 0; }
 
 body, p, ol, ul, td {
-  /*font-family: helvetica, sans-serif;*/
-	font-family: 'Arvo', arial, serif;
+	font-family: 'Inconsolata', Lucida Console, monospace;
   font-size:   0.97em;
   line-height: 1.4em;
 }

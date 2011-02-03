@@ -3,17 +3,19 @@
 <head>
   <title>Magnet</title>
 	<!-- <link href='http://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'> -->
-	<link href='http://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
   <div id="header" class="clear_fix">
-    <div id="logo"><img src="/images/like_counter.png" /></div>
+    <div id="logo"><img src="/images/logo.png" /></div>
     <div id="counter">
       <%= display_count @count %>
     </div>
+		
   </div>
   
   <div id="main_container">

@@ -89,11 +89,19 @@
 	}
 		
 #magnet_image {
-	margin: 10px 0 32px 0;
+	margin: 10px 0 38px 0;
 }
   
-#magnet_download {
-	
+a#magnet_download {
+	margin: 0 0 0 5px;
+	width: 244px;
+	height: 40px;
+	overflow: hidden;
+	display: block;
+	background: url(/images/download.png) no-repeat 0 0;
+}
+a#magnet_download:hover {
+	background-position: 0 -40px;
 }
 
 /* Misc
@@ -111,4 +119,7 @@
 }
 .right {
 	float: right;
+}
+.hidden {
+	display: none;
 }

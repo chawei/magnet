@@ -24,9 +24,10 @@ class ApplicationController < ActionController::Base
       output_html += "<span class='digit'>#{char.chr}</span>"
     end
     if log = DisablingLog.last
-      last_update = time_ago_in_words(log.created_at)
+      last_update_in_words = time_ago_in_words(log.created_at)
       #log.created_at.strftime("%R %D")
-      output_html += "<span class='last_update time_ago'>Last Update: #{last_update}</span>"
+      last_update = log.created_at.iso8601
+      output_html += "<span class='last_update'>Last Update: <abbr class='time_ago' title='#{last_update}'>#{last_update_in_words} ago</abbr></span>"
     end
     return output_html.html_safe
   end

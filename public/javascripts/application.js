@@ -3,7 +3,6 @@
 function getCountNum() {
   $.getJSON('/disabling_logs/count.json', function(data) {
     $('#counter_data').html(data.count);
+    $("abbr.time_ago").timeago();
   });
-  
-  //$(".time_ago").timeago();
 }

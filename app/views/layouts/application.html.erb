@@ -6,7 +6,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag 'rails', 'jquery.min', 'application' %>
+  <%= javascript_include_tag 'jquery.min', 'jquery.timeago', 'rails', 'application' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -35,7 +35,7 @@
 
   <script type="text/javascript" charset="utf-8">
     $(function() {
-      setInterval("getCountNum()", 2000);
+      setInterval("getCountNum()", 3000);
     });
   </script>
   <%= yield :foot %>

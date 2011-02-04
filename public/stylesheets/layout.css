@@ -10,6 +10,15 @@
 	height: 50px;
 	line-height: 50px;
 }
+  #counter .desc {
+  	display: inline-block;
+  	margin: 0 10px 0 0;
+  }
+  #counter .last_update {
+  	font-size: 13px;
+  	display: inline-block;
+  	margin: 0 0 0 10px;
+  }
 	#counter .digit {
     display: inline-block;
     width: 25px;
@@ -20,14 +29,6 @@
     background-color: #c9c9ca;
     margin: 4px 5px 0 0;
   }
-#counter .desc {
-	display: inline-block;
-	margin: 0 10px 0 0;
-}
-#counter .last_update {
-	font-size: 13px;
-	display: inline-block;
-}
 
 #header {
   margin: 0 auto;
@@ -69,23 +70,19 @@
 	width: 463px;
 	margin-top: 8px;
 }
+  #video_container .video_desc {
+  	position: absolute;
+  	right: 0px;
+  	bottom: -2px;
+  	font-size: 0.9em;
+  }
 
 #video {
 	margin: 0 10px 0 0;
 }
 
-#video_container .video_desc {
-	position: absolute;
-	right: 0px;
-	bottom: -2px;
-	font-size: 0.9em;
-}
-
 #quote {
-  font-size: 1.3em;
-	width: 270px;
-	line-height: 30px;
-	margin-top: 25px;
+	margin: 25px 0;
 }
 	#quote .author {
 		font-size: 16px;
@@ -98,6 +95,9 @@
 #magnet_download {
 	
 }
+
+/* Misc
+------------------ */
 
 .without_bgcolor {
   background: none;

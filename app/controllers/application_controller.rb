@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     final_count.each_byte do |char|
       output_html += "<span class='digit'>#{char.chr}</span>"
     end
-    
+    output_html += "<span class='last_update'>Last Update: #{DisablingLog.last.created_at.strftime("%R %D")}</span>"
     return output_html.html_safe
   end
 end

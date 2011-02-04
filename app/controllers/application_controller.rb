@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include ActionView::Helpers::DateHelper
+  
   protect_from_forgery
   
   before_filter :set_counter
@@ -22,7 +24,9 @@ class ApplicationController < ActionController::Base
       output_html += "<span class='digit'>#{char.chr}</span>"
     end
     if log = DisablingLog.last
-      output_html += "<span class='last_update'>Last Update: #{log.created_at.strftime("%R %D")}</span>"
+      last_update = time_ago_in_words(log.created_at)
+      #log.created_at.strftime("%R %D")
+      output_html += "<span class='last_update time_ago'>Last Update: #{last_update}</span>"
     end
     return output_html.html_safe
   end

@@ -4,4 +4,6 @@ function getCountNum() {
   $.getJSON('/disabling_logs/count.json', function(data) {
     $('#counter_data').html(data.count);
   });
+  
+  //$(".time_ago").timeago();
 }

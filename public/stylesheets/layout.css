@@ -4,7 +4,7 @@
 
 #counter {
 	margin: 0 auto;
-  width: 825px;
+  width: 700px;
 	font-size: 20px;
 	text-align: center;
 	height: 50px;
@@ -33,14 +33,14 @@
 #header {
   margin: 0 auto;
 	height: 100px;
-  width: 825px;
+  width: 700px;
 	position: relative;
 }
   #logo {
     font-size: 20px;
     font-weight: bold;
 		position: absolute;
-		bottom: -20px;
+		bottom: 6px;
   }
 
 .section_container {
@@ -50,10 +50,10 @@
 }
   .section {
     margin: 0 auto;
-    width: 825px;
+    width: 700px;
   }
 		.section .left_col {
-			width: 510px;
+			width: 435px;
 		}
   .section_title {
     float: left;
@@ -89,19 +89,19 @@
 	}
 		
 #magnet_image {
-	margin: 10px 0 38px 0;
+	margin: 10px 0 18px 0;
 }
   
 a#magnet_download {
 	margin: 0 0 0 5px;
-	width: 244px;
-	height: 40px;
+	width: 207px;
+	height: 34px;
 	overflow: hidden;
 	display: block;
 	background: url(/images/download.png) no-repeat 0 0;
 }
 a#magnet_download:hover {
-	background-position: 0 -40px;
+	background-position: 0 -34px;
 }
 
 /* Misc

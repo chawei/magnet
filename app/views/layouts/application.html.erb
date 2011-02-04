@@ -10,12 +10,16 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <div id="header" class="clear_fix">
-    <div id="logo"><img src="/images/logo.png" /></div>
+  <div id="counter_container">
     <div id="counter">
-      <%= display_count @count %>
+      <span class="desc"># LIKE DISABLED</span>
+      <span id="counter_num"><%= display_count @count %></span>
+      <span class="last_update">Last Update: 00:00 07/29/2006</span>
     </div>
-		
+  </div>
+  
+  <div id="header" class="clear_fix">
+    <div id="logo"><img src="/images/logo.png" /></div>		
   </div>
   
   <div id="main_container">

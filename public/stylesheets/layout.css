@@ -1,19 +1,16 @@
-#header {
-  margin: 0 auto;
-  width: 825px;
-  padding: 20px 0;
+#counter_container {
+	background-color: #ffff03;
 }
-  #logo {
-    float: left;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0 10px 0 0;
-  }
-  #counter {
-    float: left;
-    font-size: 20px;
-  }
-  #counter .digit {
+
+#counter {
+	margin: 0 auto;
+  width: 825px;
+	font-size: 20px;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+}
+	#counter .digit {
     display: inline-block;
     width: 25px;
     height: 30px;
@@ -22,6 +19,27 @@
     color: #fff;
     background-color: #c9c9ca;
     margin: 4px 5px 0 0;
+  }
+#counter .desc {
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+#counter .last_update {
+	font-size: 13px;
+	display: inline-block;
+}
+
+#header {
+  margin: 0 auto;
+	height: 100px;
+  width: 825px;
+	position: relative;
+}
+  #logo {
+    font-size: 20px;
+    font-weight: bold;
+		position: absolute;
+		bottom: -20px;
   }
 
 .section_container {
@@ -34,7 +52,7 @@
     width: 825px;
   }
 		.section .left_col {
-			width: 500px;
+			width: 510px;
 		}
   .section_title {
     float: left;
@@ -74,7 +92,7 @@
 	}
 		
 #magnet_image {
-	margin: 30px 0 32px 0;
+	margin: 10px 0 32px 0;
 }
   
 #magnet_download {

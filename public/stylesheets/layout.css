@@ -1,34 +1,41 @@
 #counter_container {
 	background-color: #ffff03;
+	border-bottom: 1px solid #aaa;
 }
 
 #counter {
 	margin: 0 auto;
-  width: 700px;
-	font-size: 20px;
+  width: 700px;	
+	font-size: 25px;
 	text-align: center;
 	height: 50px;
-	line-height: 50px;
+	line-height: 45px;
 }
   #counter .desc {
   	display: inline-block;
   	margin: 0 10px 0 0;
   }
   #counter .last_update {
-  	font-size: 13px;
+  	font-size: 14px;
   	display: inline-block;
   	margin: 0 0 0 10px;
   }
 	#counter .digit {
     display: inline-block;
     width: 25px;
-    height: 30px;
-    line-height: 30px;
+    height: 31px;
+    line-height: 31px;
     text-align: center;
     color: #fff;
+		font-size: 31px;
     background-color: #c9c9ca;
-    margin: 4px 5px 0 0;
+    margin: 2px 3px 0 0;
+		padding: 3px;
   }
+	#counter_data {
+		display: inline-block;
+		margin: 5px 0 0 0;
+	}
 
 #header {
   margin: 0 auto;
@@ -45,7 +52,8 @@
 
 .section_container {
   background-color: #fff;
-  margin: 0 0 10px 0;
+  margin: 0 auto 0;
+	width: 850px;
   padding: 20px 0;
 }
   .section {
@@ -63,7 +71,10 @@
   }
   .section_content {
     float: left;
-  }  
+  } 
+ 	.section .description {
+		margin: 24px 0 0;
+	}
 
 #video_container {
 	position: relative;
@@ -82,7 +93,8 @@
 }
 
 #quote {
-	margin: 25px 0;
+	margin: 25px auto;
+	text-align: center;
 }
 	#quote .author {
 		font-size: 16px;

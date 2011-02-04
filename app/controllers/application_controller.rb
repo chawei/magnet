@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     final_count = ""
     count = count.to_s
     
-    zero_len = 7 - count.length
+    zero_len = 8 - count.length
     zero_len.times { final_count += "0" }
     final_count += count
     

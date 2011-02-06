@@ -29,7 +29,7 @@ class DisablingLogsController < ApplicationController
   # GET /disabling_logs
   # GET /disabling_logs.xml
   def index
-    @disabling_logs = DisablingLog.all
+    @disabling_logs = DisablingLog.order('created_at DESC').limit(300)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -103,8 +103,9 @@ class DisablingLogsController < ApplicationController
   def destroy
     @disabling_log = DisablingLog.find(params[:id])
     @disabling_log.destroy
-
+    
     respond_to do |format|
+      expire_page :action => :count, :format => :json
       format.html { redirect_to(disabling_logs_url) }
       format.xml  { head :ok }
     end

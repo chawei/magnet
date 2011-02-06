@@ -93,7 +93,7 @@
 }
 
 #quote {
-	margin: 25px auto;
+	margin: 7px auto -2px;
 	text-align: center;
 }
 	#quote .author {
@@ -114,6 +114,24 @@ a#magnet_download {
 }
 a#magnet_download:hover {
 	background-position: 0 -34px;
+}
+
+a#visit_magnet {
+	margin: 0 0 0 -15px;
+	width: 280px;
+	height: 56px;
+	overflow: hidden;
+	display: block;
+	background: url(/images/visit_magnet.png) no-repeat 0 0;
+}
+a#visit_magnet:hover {
+	background-position: 0 -56px;
+}
+
+#footer {
+	margin: 0 auto 0;
+	width: 850px;
+  padding: 10px 0 20px;
 }
 
 /* Misc

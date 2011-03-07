@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data file name:</b>
+  <%= @shared_image.data_file_name %>
+</p>
+
+<p>
+  <b>Data file size:</b>
+  <%= @shared_image.data_file_size %>
+</p>
+
+<p>
+  <b>Data content type:</b>
+  <%= @shared_image.data_content_type %>
+</p>
+
+<p>
+  <b>Data updated at:</b>
+  <%= @shared_image.data_updated_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_shared_image_path(@shared_image) %> |
+<%= link_to 'Back', shared_images_path %>

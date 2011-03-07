@@ -1,5 +1,11 @@
 Magnet::Application.routes.draw do
   
+  resources :shared_images do
+    collection do
+      post 'create_from_app'
+    end
+  end
+
   resources :disabling_logs do
     collection do
       get 'count'

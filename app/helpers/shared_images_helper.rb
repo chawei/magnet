@@ -1,0 +1,2 @@
+module SharedImagesHelper
+end

@@ -1,0 +1,21 @@
+<%= form_for @shared_image, :html => { :multipart => true } do |f| %>
+  <% if @shared_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shared_image.errors.count, "error") %> prohibited this shared_image from being saved:</h2>
+
+      <ul>
+      <% @shared_image.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.file_field :data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

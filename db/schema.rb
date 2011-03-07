@@ -10,13 +10,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110129180142) do
+ActiveRecord::Schema.define(:version => 20110305201206) do
 
   create_table "disabling_logs", :force => true do |t|
     t.string   "title"
     t.string   "url"
     t.integer  "button_count"
     t.string   "button_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shared_images", :force => true do |t|
+    t.string   "data_file_name"
+    t.integer  "data_file_size"
+    t.string   "data_content_type"
+    t.datetime "data_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

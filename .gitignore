@@ -1,5 +1,7 @@
+.rvmrc
 .bundle
 db/*.sqlite3
 log/*.log
 tmp/**/*
 public/disabling_logs/*
+config/s3.yml

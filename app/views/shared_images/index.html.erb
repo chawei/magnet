@@ -3,12 +3,16 @@
 
 	<% @shared_images.each do |shared_image| %>
 
+		<table style="float:left;width:225px;">
+			<tr>
     <span style="padding: 2px;"><%= image_tag shared_image.data.url(:large) %></span>
-
-    <!-- <td><%= link_to 'Show', shared_image %></td>
-    <td><%= link_to 'Edit', edit_shared_image_path(shared_image) %></td>
-    <td><%= link_to 'Destroy', shared_image, :confirm => 'Are you sure?', :method => :delete %></td> -->
-
+		</tr>
+    <!-- <td><%= link_to 'Show', shared_image %></td> -->
+    <!-- <td><%= link_to 'Edit', edit_shared_image_path(shared_image) %></td> -->
+    <tr>
+		<td><%= link_to 'Destroy', shared_image, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>
+</table>
 	<% end %>
 
 </div>

@@ -1,8 +1,9 @@
-<div style="font-size:23px;">Magnet Screenshots</div>
+<div style="padding: 20px;">
+	<div style="font-size:23px;">Magnet Screenshots</div>
 
 	<% @shared_images.each do |shared_image| %>
 
-    <span style="padding: 6px;"><%= image_tag shared_image.data.url(:large) %></span>
+    <span style="padding: 2px;"><%= image_tag shared_image.data.url(:large) %></span>
 
     <!-- <td><%= link_to 'Show', shared_image %></td>
     <td><%= link_to 'Edit', edit_shared_image_path(shared_image) %></td>
@@ -10,6 +11,7 @@
 
 	<% end %>
 
+</div>
 
 <br />
 

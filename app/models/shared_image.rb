@@ -19,7 +19,7 @@ class SharedImage < ActiveRecord::Base
   
   protected
     def parse_data_url
-      file = File.open('uploaded.jpeg', 'r+')
+      file = File.new('public/uploaded.png', 'r+')
       file.write(Base64.decode64(self.data_url.gsub(/^data(.*)base64\,/, '')))
       file
     rescue # catch url errors with validations instead of exceptions (Errno::ENOENT, OpenURI::HTTPError, etc...)

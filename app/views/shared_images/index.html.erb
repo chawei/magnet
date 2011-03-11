@@ -1,22 +1,15 @@
-<h1>Listing shared_images</h1>
+<div style="font-size:23px;">Magnet Screenshots</div>
 
-<table>
-  <tr>
-    <th>Image</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+	<% @shared_images.each do |shared_image| %>
 
-<% @shared_images.each do |shared_image| %>
-  <tr>
-    <td><%= image_tag shared_image.data.url(:large) %></td>
-    <td><%= link_to 'Show', shared_image %></td>
+    <span style="padding: 6px;"><%= image_tag shared_image.data.url(:large) %></span>
+
+    <!-- <td><%= link_to 'Show', shared_image %></td>
     <td><%= link_to 'Edit', edit_shared_image_path(shared_image) %></td>
-    <td><%= link_to 'Destroy', shared_image, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <td><%= link_to 'Destroy', shared_image, :confirm => 'Are you sure?', :method => :delete %></td> -->
+
+	<% end %>
+
 
 <br />
 

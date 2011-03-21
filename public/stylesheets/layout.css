@@ -134,6 +134,37 @@ a#visit_magnet:hover {
   padding: 10px 0 20px;
 }
 
+/* Disabling Logs
+------------------ */
+#logs_index_page {
+  margin: 10px auto;
+  width: 900px;
+}
+#logs_index_page h1 {
+  margin: 20px 0 20px 0;
+}
+#logs_index_page table {
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+#logs_index_page th {
+  text-align: left;
+  padding: 3px 5px 3px 5px;
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #333;
+}
+  #logs_index_page th.small {
+    width: 150px;
+  }
+#logs_index_page td {
+  padding: 3px 5px 3px 5px;
+  margin: 0;
+}
+#logs_index_page tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
 /* Misc
 ------------------ */
 

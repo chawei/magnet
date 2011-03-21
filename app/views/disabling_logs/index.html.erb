@@ -1,29 +1,29 @@
-<h1>Listing disabling_logs</h1>
+<div id="logs_index_page">
+  <table>
+    <colgroup>
+      <col width="340">
+      <col width="320">
+      <col width="80">
+      <col width="80">
+      <col width="80">
+    </colgroup>
+    
+    <tr>
+      <th>title</th>
+      <th>url</th>
+      <th>count</th>
+      <th>type</th>
+      <th>locale</th>
+    </tr>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Url</th>
-    <th>Button count</th>
-    <th>Button type</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @disabling_logs.each do |disabling_log| %>
-  <tr>
-    <td><%= disabling_log.title %></td>
-    <td><%= disabling_log.url %></td>
-    <td><%= disabling_log.button_count %></td>
-    <td><%= disabling_log.button_type %></td>
-    <td><%= link_to 'Show', disabling_log %></td>
-    <td><%= link_to 'Edit', edit_disabling_log_path(disabling_log) %></td>
-    <td><%= link_to 'Destroy', disabling_log, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Disabling log', new_disabling_log_path %>
+  <% @disabling_logs.each do |disabling_log| %>
+    <tr>
+      <td><%= disabling_log.title %></td>
+      <td><%= link_to truncate(disabling_log.url, :length => 50, :omission => '...'), disabling_log.url %></td>
+      <td><%= disabling_log.button_count %></td>
+      <td><%= disabling_log.button_type %></td>
+      <td><%= disabling_log.locale %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>

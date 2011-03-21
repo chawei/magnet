@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110305201206) do
+ActiveRecord::Schema.define(:version => 20110321190351) do
 
   create_table "disabling_logs", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20110305201206) do
     t.string   "button_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "locale"
   end
 
   create_table "shared_images", :force => true do |t|

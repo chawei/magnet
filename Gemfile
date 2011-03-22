@@ -10,6 +10,7 @@ gem 'jquery-rails', '>= 0.2.6'
 
 gem 'aws-s3', :require => 'aws/s3'
 gem 'paperclip'
+gem 'autometal-geoip'
 
 # Use unicorn as the web server
 # gem 'unicorn'

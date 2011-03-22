@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.0.5)
     activesupport (3.0.5)
     arel (2.0.9)
+    autometal-geoip (0.4.0)
     aws-s3 (0.6.2)
       builder
       mime-types
@@ -89,6 +90,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autometal-geoip
   aws-s3
   jquery-rails (>= 0.2.6)
   paperclip

@@ -15,7 +15,7 @@
       <th>count</th>
       <th>type</th>
       <th>locale</th>
-      <th>ip</th>
+      <th>location</th>
     </tr>
 
   <% @disabling_logs.each do |disabling_log| %>
@@ -25,7 +25,7 @@
       <td><%= disabling_log.button_count %></td>
       <td><%= disabling_log.button_type %></td>
       <td><%= disabling_log.locale %></td>
-      <td><%= disabling_log.request_ip %></td>
+      <td><%= disabling_log.location %></td>
     </tr>
   <% end %>
   </table>

@@ -4,6 +4,7 @@ class DisablingLogsController < ApplicationController
   def add
     return if params[:authenticity_token] != "ogoKH6Gei/sAnYtsK2WIhuFAZVmahD7eBCtrrQswoD4="
     @disabling_log = DisablingLog.new(params[:disabling_log])
+    @disabling_log.request_ip = request.env['REMOTE_ADDR']
 
     respond_to do |format|
       if @disabling_log.save

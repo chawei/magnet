@@ -6,6 +6,7 @@
       <col width="80">
       <col width="80">
       <col width="80">
+      <col width="100">
     </colgroup>
     
     <tr>
@@ -14,6 +15,7 @@
       <th>count</th>
       <th>type</th>
       <th>locale</th>
+      <th>ip</th>
     </tr>
 
   <% @disabling_logs.each do |disabling_log| %>
@@ -23,6 +25,7 @@
       <td><%= disabling_log.button_count %></td>
       <td><%= disabling_log.button_type %></td>
       <td><%= disabling_log.locale %></td>
+      <td><%= disabling_log.request_ip %></td>
     </tr>
   <% end %>
   </table>

@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   before_filter :set_counter
   
-  helper_method :display_count
+  helper_method :display_count, :display_update
   
   def set_counter
     @count = DisablingLog.total_count
@@ -31,4 +31,9 @@ class ApplicationController < ActionController::Base
     end
     return output_html.html_safe
   end
+  
+  def display_update()
+    return 'tasjdkljalksj'
+  end
+  
 end

@@ -15,6 +15,8 @@ Magnet::Application.routes.draw do
 
   root :to => "home#index"
   
+  match "/about", :to => "home#about"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,186 +1,198 @@
-#counter_container {
-	background-color: #ffff03;
-	border-bottom: 1px solid #aaa;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-#counter {
-	margin: 0 auto;
-  width: 800px;	
-	font-size: 25px;
-	text-align: center;
-	height: 50px;
-	line-height: 45px;
+@font-face { 
+	font-family: Trade-Gothic; 
+	src: url('../font/TradeGot.ttf'); 
 }
-  #counter .desc {
-  	display: inline-block;
-  	margin: 0 10px 0 0;
-  }
-  #counter .last_update {
-  	font-size: 14px;
-  	display: inline-block;
-  	margin: 0 0 0 10px;
-  }
-	#counter .digit {
-    display: inline-block;
-    width: 25px;
-    height: 31px;
-    line-height: 31px;
-    text-align: center;
-    color: #fff;
-		font-size: 31px;
-    background-color: #c9c9ca;
-    margin: 2px 3px 0 0;
-		padding: 3px;
-  }
-	#counter_data {
-		display: inline-block;
-		margin: 5px 0 0 0;
-	}
 
-#header {
-  margin: 0 auto;
-	height: 100px;
-  width: 700px;
-	position: relative;
+@font-face { 
+	font-family: Trade-Gothic-Bold; 
+	src: url('../font/TradeGotBol.ttf'); 
 }
-  #logo {
-    font-size: 20px;
-    font-weight: bold;
-		position: absolute;
-		bottom: 6px;
-  }
 
-.section_container {
-  background-color: #fff;
-  margin: 0 auto 0;
-	width: 850px;
-  padding: 20px 0;
+@font-face { 
+	font-family: Trade-Gothic-Bold-Con; 
+	src: url('../font/TradeGotBolConTweObl.ttf'); 
 }
-  .section {
-    margin: 0 auto;
-    width: 700px;
-  }
-		.section .left_col {
-			width: 435px;
-		}
-  .section_title {
-    float: left;
-    font-weight: bold;
-    margin: 0;
-    width: 150px;
-  }
-  .section_content {
-    float: left;
-  } 
- 	.section .description {
-		margin: 24px 0 0;
-	}
 
+@font-face { 
+	font-family: Trade-Gothic-Eig-Con; 
+	src: url('../font/TradeGotConEig.ttf'); 
+}
+
+body {
+	font-family: "Trade-Gothic-Bold", sans-serif;
+  font-size: 19px;
+  text-align: left;
+	color: #666600;
+}
+
+a {
+	color: #666600;
+  text-decoration: none;
+}
+a:hover { color: #000; }
+
+
+/* Menu
+------------------ */
+#menu {
+	background-color: #fff;
+	color: #666600;
+	margin: 20px auto 0 auto;
+	width: 90%;
+	min-width: 800px;
+}
+#menu #selection {
+	width:30%; 
+	min-width: 280px;
+}
+#menu #logo {
+	font-family: "Trade-Gothic-Bold", sans-serif;
+	display: inline-block;
+	padding: 8px 6px 7px 9px;
+}
+#menu .item {
+	font-family: "Trade-Gothic-Eig-Con", sans-serif;
+	display: inline-block;
+	margin-left: 8px;
+}
+#menu .item_selected {
+	border-top: 4px solid rgba(0,0,0, 0.5); 
+	padding:7px 2px 0 0;
+	font-family: "Trade-Gothic-Eig-Con", sans-serif;
+	display: inline-block;
+	margin-left: 8px;
+}
+
+#update {
+	width: 60%;
+	border-bottom: 1px dashed #666600;
+	border-top: 1px solid #666600;
+	padding: 10px 0 4px 0;
+	margin-left: 20px;
+	display: inline-block;
+	font-family: "Trade-Gothic-Bold", sans-serif;
+}
+
+
+/* Content
+------------------ */
+#main {
+	margin: 50px auto 60px auto;
+	width: 90%;
+}
+
+#title {
+	position: fixed;
+	top: 0px;
+	left: 30px;
+	display: inline-block;
+	padding: 13px 9px 7px 9px;
+}
+
+.like_box {
+	width: 310px;
+	float: left;
+	padding-bottom: 30px;
+}
+
+.like_box .count {
+	float: left;
+	width: 80px;
+	text-align: right;
+	padding: 6px 10px 0 0;
+	font-family: "Trade-Gothic-Bold-Con", sans-serif;
+	font-size: 33px;
+}
+.like_box .info {
+	float: left;
+	width: 200px;
+	text-align: left;
+}
+.like_box .like {
+	font-family: "Trade-Gothic-Bold-Con", sans-serif;
+line-height: 38px;
+	font-size: 43px;
+}
+
+.like_box .city {
+	font-family: "Trade-Gothic-Eig-Con", sans-serif;	
+	font-size: 15px;
+	margin-top: 4px;
+	line-height: 17px;
+}
+
+/* About
+------------------ */
+#main_about {
+	width:70%;
+	min-width:770px;
+	margin: 50px auto 60px auto;
+}
 #video_container {
-	position: relative;
-	width: 463px;
-	margin-top: 8px;
+	margin-top: 20px;
 }
-  #video_container .video_desc {
-  	position: absolute;
-  	right: 0px;
-  	bottom: -2px;
-  	font-size: 0.9em;
-  }
 
 #video {
-	margin: 0 10px 0 0;
+/*	margin: 0 10px 0 0;
+  border:2px solid #ffff00;*/
 }
 
-#quote {
-	margin: 7px auto -2px;
+.about_desc {
+	font-family: "Trade-Gothic-Bold", sans-serif;
+	width: 570px;
+	margin-left: 90px;
+	line-height: 22px;
+	margin-top: 10px;
+}
+.about_desc a{
+	text-decoration: underline;
+}
+
+#download {
+	padding: 40px 0 0 24px;
+}
+#download_magnet {
+	background-color: #ffff00;
 	text-align: center;
+	margin: 20px 0 0 0;
+	padding: 11px 8px 6px 8px;
 }
-	#quote .author {
-		font-size: 16px;
-	}
-		
-#magnet_image {
-	margin: 10px 0 18px 0;
+#circle_in {
+	margin-left: 17px;
 }
-  
-a#magnet_download {
-	margin: 0 0 0 5px;
-	width: 207px;
-	height: 34px;
-	overflow: hidden;
-	display: block;
-	background: url(/images/download.png) no-repeat 0 0;
+#circle_out {
+	margin: 174px 0 0 35px;
 }
-a#magnet_download:hover {
-	background-position: 0 -34px;
-}
-
-a#visit_magnet {
-	margin: 0 0 0 -15px;
-	width: 280px;
-	height: 56px;
-	overflow: hidden;
-	display: block;
-	background: url(/images/visit_magnet.png) no-repeat 0 0;
-}
-a#visit_magnet:hover {
-	background-position: 0 -56px;
-}
-
-#footer {
-	margin: 0 auto 0;
-	width: 1000px;
-  padding: 10px 0 20px;
-}
-
-/* Disabling Logs
------------------- */
-#logs_index_page {
-  margin: 10px auto;
-  width: 1000px;
-}
-#logs_index_page h1 {
-  margin: 20px 0 20px 0;
-}
-#logs_index_page table {
-  margin-top: 20px;
-  border-collapse: collapse;
-}
-
-#logs_index_page th {
-  text-align: left;
-  padding: 3px 5px 3px 5px;
-  background-color: #fdfdfd;
-  border-bottom: 1px solid #333;
-}
-  #logs_index_page th.small {
-    width: 150px;
-  }
-#logs_index_page td {
-  padding: 3px 5px 3px 5px;
-  margin: 0;
-}
-#logs_index_page tr:nth-child(odd) {
-  background-color: #fafafa;
+#arrow {
+	margin: 18px 0 0 150px;
 }
 
 /* Misc
 ------------------ */
-
-.without_bgcolor {
-  background: none;
-}
-.with_bgcolor {
-  background-color: #fff;
-}
-
 .left {
-  float: left;
+	float:left; 
 }
-.right {
-	float: right;
+.clear {
+	clear: both;
 }
 .hidden {
-	display: none;
+  display: none;
+}
+
+.clear_fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* IE7 Hack */
+.clear_fix {
+  clear: both;
+  *display: inline-block;
 }

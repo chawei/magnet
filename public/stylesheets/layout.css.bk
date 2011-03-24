@@ -1,0 +1,186 @@
+#counter_container {
+	background-color: #ffff03;
+	border-bottom: 1px solid #aaa;
+}
+
+#counter {
+	margin: 0 auto;
+  width: 800px;	
+	font-size: 25px;
+	text-align: center;
+	height: 50px;
+	line-height: 45px;
+}
+  #counter .desc {
+  	display: inline-block;
+  	margin: 0 10px 0 0;
+  }
+  #counter .last_update {
+  	font-size: 14px;
+  	display: inline-block;
+  	margin: 0 0 0 10px;
+  }
+	#counter .digit {
+    display: inline-block;
+    width: 25px;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    color: #fff;
+		font-size: 31px;
+    background-color: #c9c9ca;
+    margin: 2px 3px 0 0;
+		padding: 3px;
+  }
+	#counter_data {
+		display: inline-block;
+		margin: 5px 0 0 0;
+	}
+
+#header {
+  margin: 0 auto;
+	height: 100px;
+  width: 700px;
+	position: relative;
+}
+  #logo {
+    font-size: 20px;
+    font-weight: bold;
+		position: absolute;
+		bottom: 6px;
+  }
+
+.section_container {
+  background-color: #fff;
+  margin: 0 auto 0;
+	width: 850px;
+  padding: 20px 0;
+}
+  .section {
+    margin: 0 auto;
+    width: 700px;
+  }
+		.section .left_col {
+			width: 435px;
+		}
+  .section_title {
+    float: left;
+    font-weight: bold;
+    margin: 0;
+    width: 150px;
+  }
+  .section_content {
+    float: left;
+  } 
+ 	.section .description {
+		margin: 24px 0 0;
+	}
+
+#video_container {
+	position: relative;
+	width: 463px;
+	margin-top: 8px;
+}
+  #video_container .video_desc {
+  	position: absolute;
+  	right: 0px;
+  	bottom: -2px;
+  	font-size: 0.9em;
+  }
+
+#video {
+	margin: 0 10px 0 0;
+}
+
+#quote {
+	margin: 7px auto -2px;
+	text-align: center;
+}
+	#quote .author {
+		font-size: 16px;
+	}
+		
+#magnet_image {
+	margin: 10px 0 18px 0;
+}
+  
+a#magnet_download {
+	margin: 0 0 0 5px;
+	width: 207px;
+	height: 34px;
+	overflow: hidden;
+	display: block;
+	background: url(/images/download.png) no-repeat 0 0;
+}
+a#magnet_download:hover {
+	background-position: 0 -34px;
+}
+
+a#visit_magnet {
+	margin: 0 0 0 -15px;
+	width: 280px;
+	height: 56px;
+	overflow: hidden;
+	display: block;
+	background: url(/images/visit_magnet.png) no-repeat 0 0;
+}
+a#visit_magnet:hover {
+	background-position: 0 -56px;
+}
+
+#footer {
+	margin: 0 auto 0;
+	width: 1000px;
+  padding: 10px 0 20px;
+}
+
+/* Disabling Logs
+------------------ */
+#logs_index_page {
+  margin: 10px auto;
+  width: 1000px;
+}
+#logs_index_page h1 {
+  margin: 20px 0 20px 0;
+}
+#logs_index_page table {
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+#logs_index_page th {
+  text-align: left;
+  padding: 3px 5px 3px 5px;
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #333;
+}
+  #logs_index_page th.small {
+    width: 150px;
+  }
+#logs_index_page td {
+  padding: 3px 5px 3px 5px;
+  margin: 0;
+}
+#logs_index_page tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+/* Misc
+------------------ */
+
+.without_bgcolor {
+  background: none;
+}
+.with_bgcolor {
+  background-color: #fff;
+}
+
+.left {
+  float: left;
+}
+.right {
+	float: right;
+}
+.hidden {
+	display: none;
+}

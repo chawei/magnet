@@ -12,29 +12,35 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <div id="counter_container">
-    <div id="counter">
-      <span class="desc"># LIKE DISABLED</span>
-      <span id="counter_data">
-        <%= display_count @count %>
-      </span>
-    </div>
-  </div>
   
-  <!-- <div id="header" class="clear_fix">
-    <div id="logo"><img src="/images/logo.png" /></div>   
-  </div> -->
-  
+	<!-- <div id="counter_container">
+	    <div id="counter">
+	      <span class="desc"># LIKE DISABLED</span>
+	      <span id="counter_data">
+	        <%= display_count @count %>
+	      </span>
+	    </div>
+	  </div> -->
+	
+	<div id="menu" class="clear_fix">
+		<div id="selection" class="left">
+			<a id="logo">ANTI-LIKE MAGNET</a>
+			<a class="item" href="/"> DATA</a>
+			<a class="item_selected" href="/about.html"> ABOUT</a>
+		</div>
+		<div id="update" class="left">
+			<span id="timestamp">10 mins ago </span>:<span id="info"> <%= display_update %> </span>
+		</div>
+	</div>
+		
+   
   <div id="main_container">
     <div id="main">
       <%= yield %>
     </div>
   </div>
 
-  <div id="footer">
-      Project by <a href="http://yuinchien.com" target="_blank">yuin</a> and <a href="http://chaweihsu.com" target="_blank">chawei</a>
-  </div>
-
+  
   <script type="text/javascript" charset="utf-8">
     $(function() {
       setInterval("getCountNum()", 3000);

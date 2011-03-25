@@ -34,7 +34,7 @@ a {
 	color: #666600;
   text-decoration: none;
 }
-a:hover { color: #000; }
+a:hover { color: #99CC00; }
 
 
 /* Menu
@@ -61,7 +61,7 @@ a:hover { color: #000; }
 	margin-left: 8px;
 }
 #menu .item_selected {
-	border-top: 4px solid rgba(0,0,0, 0.5); 
+	border-top: 4px solid #666600; 
 	padding:7px 2px 0 0;
 	font-family: "Trade-Gothic-Eig-Con", sans-serif;
 	display: inline-block;

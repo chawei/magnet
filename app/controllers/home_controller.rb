@@ -8,6 +8,9 @@ class HomeController < ApplicationController
   def about 
   end
   
+  def detail 
+  end
+  
   private
     def get_latest_log
       @latest_log = DisablingLog.order('created_at DESC').first

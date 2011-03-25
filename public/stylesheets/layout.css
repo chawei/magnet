@@ -94,11 +94,11 @@ a:hover { color: #000; }
 	position: relative;
 	width: 18%;
 	margin-left: 20px;
-	min-width: 150px;
+	min-width: 180px;
 	font-family: "Trade-Gothic-Bold-Con", sans-serif;
 }
 #top_list_title{
-	font-size: 43px;
+	font-size: 28px;
 	margin-bottom: 10px;
 }
 #top_list .item{
@@ -112,7 +112,7 @@ a:hover { color: #000; }
 	top: 120px;
 }
 #top_list #circle_in_out {
-	margin: 6px 0 0 -4px;
+	margin: 17px 0 0 -4px;
 }
 
 #title {
@@ -201,6 +201,35 @@ line-height: 38px;
 #arrow {
 	margin: 18px 0 0 150px;
 }
+
+/* Detail Page
+------------------ */
+#piechart {
+	float: left;
+	margin: -50px 0 0 -20px;
+}
+#detail_like {
+	float: left;
+	font-size: 33px;
+	display: inline;
+	padding-top: 7px;
+	border-top: 6px solid #666600;
+}
+#detail_info {
+	font-family: "Trade-Gothic-Bold-Con";
+	float: left;
+	margin: 14px 0 0 15px;
+}
+#detail_info #count {
+	font-size: 33px;
+}
+#detail_info #lang_list {
+	margin-top: 10px;
+	font-size: 20px;
+	line-height: 22px;
+} 
+
+
 
 /* Misc
 ------------------ */

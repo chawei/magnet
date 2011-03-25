@@ -85,6 +85,34 @@ a:hover { color: #000; }
 	margin: 50px auto 60px auto;
 	width: 90%;
 }
+#content {
+	width: 70%;
+	min-width: 700px;
+}
+#top_list {
+	position: relative;
+	width: 20%;
+	margin-left: 20px;
+	min-width: 210px;
+	font-family: "Trade-Gothic-Bold-Con", sans-serif;
+}
+#top_list_title{
+	font-size: 43px;
+	margin-bottom: 10px;
+}
+#top_list .item{
+	font-family: "Trade-Gothic-Bold", sans-serif;
+	line-height: 21px;
+	font-size: 19px;
+}
+#top_list #top_list_arrows {
+	position: absolute;
+	left: -100px;
+	top: 120px;
+}
+#top_list #circle_in_out {
+	margin: 6px 0 0 -4px;
+}
 
 #title {
 	position: fixed;
@@ -95,7 +123,7 @@ a:hover { color: #000; }
 }
 
 .like_box {
-	width: 310px;
+	width: 270px;
 	float: left;
 	padding-bottom: 30px;
 }
@@ -110,7 +138,7 @@ a:hover { color: #000; }
 }
 .like_box .info {
 	float: left;
-	width: 200px;
+	width: 180px;
 	text-align: left;
 }
 .like_box .like {
@@ -195,4 +223,8 @@ line-height: 38px;
 .clear_fix {
   clear: both;
   *display: inline-block;
+}
+.verticaltext {
+	-webkit-transform: rotate(90deg); 
+	-moz-transform: rotate(90deg);
 }

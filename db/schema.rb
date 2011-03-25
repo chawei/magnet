@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110322034015) do
+ActiveRecord::Schema.define(:version => 20110325060655) do
 
   create_table "disabling_logs", :force => true do |t|
     t.string   "title"
@@ -21,6 +21,23 @@ ActiveRecord::Schema.define(:version => 20110322034015) do
     t.datetime "updated_at"
     t.string   "locale"
     t.string   "request_ip"
+    t.integer  "lang_mapping_id"
+    t.string   "city"
+    t.string   "country"
+  end
+
+  create_table "lang_mappings", :force => true do |t|
+    t.string   "lang_name"
+    t.string   "locale"
+    t.string   "like_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "like_buttons", :force => true do |t|
+    t.string   "label"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "shared_images", :force => true do |t|

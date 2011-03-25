@@ -7,7 +7,7 @@
 	<!-- <link href='http://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'> -->
 	<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
-  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'layout' %>
   <%= javascript_include_tag 'jquery.min', 'jquery.timeago', 'rails', 'application' %>
   <%= csrf_meta_tag %>
 </head>
@@ -26,18 +26,16 @@
 		<div id="selection" class="left">
 			<a id="logo">ANTI-LIKE MAGNET</a>
 			<a class="item" href="/"> DATA</a>
-			<a class="item_selected" href="/about.html"> ABOUT</a>
+			<a class="item_selected" href="/about"> ABOUT</a>
 		</div>
 		<div id="update" class="left">
-			<span id="timestamp">10 mins ago </span>:<span id="info"> <%= display_update %> </span>
+			<span id="timestamp"><%= time_ago_in_words @latest_log.created_at %> ago</span>:
+			<span id="info"><%= @latest_log.location %></span>
 		</div>
 	</div>
 		
    
-  	<%= yield %>
-  </div>
-
-
+  <%= yield %>
   
   <script type="text/javascript" charset="utf-8">
     $(function() {

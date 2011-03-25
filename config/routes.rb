@@ -1,5 +1,9 @@
 Magnet::Application.routes.draw do
   
+  resources :lang_mappings
+
+  resources :like_buttons
+  
   resources :shared_images do
     collection do
       post 'create_from_app'

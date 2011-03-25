@@ -2,92 +2,22 @@
 
 	<div id="content" class="left">
 		<div class="clear_fix">
+		  <% for like in LangMapping.statistics do %>
 			<div class="like_box">
 				<div class="clear_fix">
-					<div class="count">2319</div>
+					<div class="count"><%= like.total_btns_count.to_i %></div>
 					<div class="info">
-						<div class="like">Like</div>
+						<div class="like"><%= like.like_text %></div>
 						<div class="city">
-							<div>PASADEN</div>
-							<div>NEW YORK</div>
-							<div>BEIGIN</div>
+						  <% like.top_cities.each do |result| %>
+							<div><%= result.city %></div>
+							<% end %>
 						</div>
 					</div>
 				</div>
 			</div>
-	
-			<div class="like_box">
-				<div class="clear_fix">
-					<div class="count">167</div>
-					<div class="info">
-						<div class="like">讚</div>
-						<div class="city">
-							<div>PARIS</div>
-							<div>VAN COUVER</div>
-							<div>SIDNEY</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	
-			<div class="like_box">
-				<div class="clear_fix">
-					<div class="count">121</div>
-					<div class="info">
-						<div class="like">Gefällt mir</div>
-						<div class="city">
-							<div>BERLIN</div>
-							<div>VAN COUVER</div>
-							<div>SIDNEY</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	
-			<div class="like_box">
-				<div class="clear_fix">
-					<div class="count">97</div>
-					<div class="info">
-						<div class="like">Mi piace</div>
-						<div class="city">
-							<div>ROME</div>
-							<div>VAN COUVER</div>
-							<div>SIDNEY</div>
-							<div>PARIS</div>
-							<div>VAN COUVER</div>
-							<div>SIDNEY</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	
-			<div class="like_box">
-				<div class="clear_fix">
-					<div class="count">21</div>
-					<div class="info">
-						<div class="like">Je Tame</div>
-						<div class="city">
-							<div>PARIS</div>
-							<div>VAN COUVER</div>
-							<div>SIDNEY</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	
-			<div class="like_box">
-				<div class="clear_fix">
-					<div class="count">2319</div>
-					<div class="info">
-						<div class="like">'いいね！</div>
-						<div class="city">
-							<div>TOKYO</div>
-							<div>OSAKA</div>
-							<div>SIDNEY</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<% end %>
+		
 		</div>
 	</div>
 
@@ -95,16 +25,9 @@
 	<div id="top_list" class="left" >
 		<div id="top_list_arrows" class="verticaltext"> >>>>>>>>>>>>>> </div>
 		<div id="top_list_title">TOP 10</div>
-		<div class="item">English (US)</div>
-		<div class="item">Spanish</div>
-		<div class="item">Italian</div>
-		<div class="item">French (FR)</div>
-		<div class="item">Chinese</div>
-		<div class="item">Hebrew</div>
-		<div class="item">Polish</div>
-		<div class="item">Welsh</div>
-		<div class="item">English (Pirate)</div>
-		<div class="item">Kurdish</div>
+		<% @top_langs.each do |lang| %>
+		<div class="item"><%= lang.lang_name %></div>
+		<% end %>
 		<div id="circle_in_out"><img src="images/circle_in_out.png"></div>
 	</div>
 

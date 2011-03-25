@@ -2,7 +2,7 @@ class LangMapping < ActiveRecord::Base
   has_many :disabling_logs
   
   def self.top_list
-    select("lang_mappings.*, count(disabling_logs.id) as logs_count").joins(:disabling_logs).order("logs_count DESC").group('lang_mappings.locale')
+    select("lang_mappings.*, sum(disabling_logs.button_count) as logs_count").joins(:disabling_logs).order("logs_count DESC").group('lang_mappings.locale')
   end
   
   def self.statistics

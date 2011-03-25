@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lang name:</b>
+  <%= @lang_mapping.lang_name %>
+</p>
+
+<p>
+  <b>Locale:</b>
+  <%= @lang_mapping.locale %>
+</p>
+
+<p>
+  <b>Like text:</b>
+  <%= @lang_mapping.like_text %>
+</p>
+
+
+<%= link_to 'Edit', edit_lang_mapping_path(@lang_mapping) %> |
+<%= link_to 'Back', lang_mappings_path %>

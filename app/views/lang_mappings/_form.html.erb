@@ -1,0 +1,29 @@
+<%= form_for(@lang_mapping) do |f| %>
+  <% if @lang_mapping.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lang_mapping.errors.count, "error") %> prohibited this lang_mapping from being saved:</h2>
+
+      <ul>
+      <% @lang_mapping.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lang_name %><br />
+    <%= f.text_field :lang_name %>
+  </div>
+  <div class="field">
+    <%= f.label :locale %><br />
+    <%= f.text_field :locale %>
+  </div>
+  <div class="field">
+    <%= f.label :like_text %><br />
+    <%= f.text_field :like_text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

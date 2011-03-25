@@ -1,0 +1,23 @@
+<h1>Listing like_buttons</h1>
+
+<table>
+  <tr>
+    <th>Label</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @like_buttons.each do |like_button| %>
+  <tr>
+    <td><%= like_button.label %></td>
+    <td><%= link_to 'Show', like_button %></td>
+    <td><%= link_to 'Edit', edit_like_button_path(like_button) %></td>
+    <td><%= link_to 'Destroy', like_button, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Like button', new_like_button_path %>

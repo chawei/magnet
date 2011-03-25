@@ -1,0 +1,2 @@
+module LikeButtonsHelper
+end

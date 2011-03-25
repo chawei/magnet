@@ -1,0 +1,27 @@
+<h1>Listing lang_mappings</h1>
+
+<table>
+  <tr>
+    <th>Lang name</th>
+    <th>Locale</th>
+    <th>Like text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lang_mappings.each do |lang_mapping| %>
+  <tr>
+    <td><%= lang_mapping.lang_name %></td>
+    <td><%= lang_mapping.locale %></td>
+    <td><%= lang_mapping.like_text %></td>
+    <td><%= link_to 'Show', lang_mapping %></td>
+    <td><%= link_to 'Edit', edit_lang_mapping_path(lang_mapping) %></td>
+    <td><%= link_to 'Destroy', lang_mapping, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lang mapping', new_lang_mapping_path %>

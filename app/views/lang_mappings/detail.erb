@@ -18,7 +18,7 @@
 	  <% @like.top_10_cities.each do |city| %>
   	<tr> 
     	<th><%= "#{city.city} #{city.city_count.to_i}" %></th> 
-      <td><%= "#{city.city_count/@like.btns_count.to_f*100}%" %></td> 
+      <td><%= "#{city.city_count.to_f/@like.btns_count.to_f*100}%" %></td> 
     </tr> 
     <% end %>
  	</table>

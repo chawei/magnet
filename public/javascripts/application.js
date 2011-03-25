@@ -6,3 +6,10 @@ function getCountNum() {
     $("abbr.time_ago").timeago();
   });
 }
+
+function getLatestLog() {
+  $.getJSON('/disabling_logs/latest.json', function(data) {
+    $('#update').html(data.latest);
+    //$("#timestamp").timeago();
+  });
+}

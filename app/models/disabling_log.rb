@@ -7,6 +7,10 @@ class DisablingLog < ActiveRecord::Base
     DisablingLog.sum :button_count
   end
   
+  def self.latest
+    order('created_at DESC').first
+  end
+  
   def location
     return nil if request_ip.blank?
     

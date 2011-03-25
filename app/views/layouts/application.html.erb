@@ -8,8 +8,10 @@
 	<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
   <%= stylesheet_link_tag 'layout' %>
-  <%= javascript_include_tag 'jquery.min', 'jquery.timeago', 'raphael-min', 'pie', 'rails', 'application' %>
+  <%= javascript_include_tag 'jquery.min', 'jquery.timeago', 'rails', 'application' %>
   <%= csrf_meta_tag %>
+  
+  <%= yield :head %>
 </head>
 <body>
   
@@ -17,20 +19,18 @@
 	    <div id="counter">
 	      <span class="desc"># LIKE DISABLED</span>
 	      <span id="counter_data">
-	        <%= display_count @count %>
 	      </span>
 	    </div>
 	  </div> -->
 	
 	<div id="menu" class="clear_fix">
 		<div id="selection" class="left">
-			<a id="logo">ANTI-LIKE MAGNET</a>
-			<a class="item" href="/"> DATA</a>
-			<a class="item_selected" href="/about"> ABOUT</a>
+			<a id="logo" href="/">ANTI-LIKE MAGNET</a>
+			<a class="item <%= ['index', 'detail'].include?(params[:action]) ? 'item_selected' : '' %>" href="/">DATA</a>
+			<a class="item <%= params[:action] == 'about' ? 'item_selected' : '' %>" href="/about">ABOUT</a>
 		</div>
 		<div id="update" class="left">
-			<span id="timestamp"><%= time_ago_in_words @latest_log.created_at %> ago</span>:
-			<span id="info"><%= @latest_log.location %></span>
+			<%= display_log(@latest_log) %>
 		</div>
 	</div>
 		
@@ -39,7 +39,7 @@
   
   <script type="text/javascript" charset="utf-8">
     $(function() {
-      setInterval("getCountNum()", 3000);
+      setInterval("getLatestLog()", 3000);
     });
   </script>
   

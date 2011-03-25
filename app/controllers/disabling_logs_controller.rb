@@ -27,6 +27,14 @@ class DisablingLogsController < ApplicationController
     end
   end
   
+  def latest
+    @log = DisablingLog.latest
+    
+    respond_to do |format|
+      format.json  { render :json => { :latest => display_log(@log) } }
+    end
+  end
+  
   # GET /disabling_logs
   # GET /disabling_logs.xml
   def index

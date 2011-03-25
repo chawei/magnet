@@ -160,7 +160,7 @@ line-height: 38px;
 #main_about {
 	width:70%;
 	min-width:770px;
-	margin: 50px auto 60px auto;
+	margin: 50px auto 30px;
 }
 #video_container {
 	margin-top: 20px;
@@ -210,7 +210,7 @@ line-height: 38px;
 }
 #detail_like {
 	float: left;
-	font-size: 33px;
+	font-size: 30px;
 	display: inline;
 	padding-top: 7px;
 	border-top: 6px solid #666600;

@@ -1,18 +1,8 @@
-class HomeController < ApplicationController
-  before_filter :get_latest_log
-  
+class HomeController < ApplicationController  
   def index
     @top_langs = LangMapping.top_list.limit(10)
   end
   
   def about 
-  end
-  
-  def detail 
-  end
-  
-  private
-    def get_latest_log
-      @latest_log = DisablingLog.order('created_at DESC').first
-    end
+  end  
 end

@@ -10,6 +10,14 @@ class LangMappingsController < ApplicationController
     end
   end
 
+  def detail
+    @like = LangMapping.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @like }
+    end
+  end
+  
   # GET /lang_mappings/1
   # GET /lang_mappings/1.xml
   def show

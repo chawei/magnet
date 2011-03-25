@@ -1,0 +1,43 @@
+<div id="main" class="clear_fix">
+	
+<div id="content" class="left">
+
+	<div id="detail_like"><%= @like.like_text %></div>
+	<div id="detail_info">
+		<div id="count"><%= @like.btns_count %></div>
+		<div id="lang_list">
+		  <% @like.top_langs.each do |lang| %>
+			<div><%= "#{LangMapping.lang_name_by_locale(lang.locale)} x #{lang.locale_count.to_i}" %></div>
+		  <% end %>
+		</div>
+		<div style="margin-top:15px;"><img src="/images/circle_in_out2.png"></div>
+	</div>	
+
+	
+	<table id="table-piechart">
+	  <% @like.top_10_cities.each do |city| %>
+  	<tr> 
+    	<th><%= "#{city.city} #{city.city_count.to_i}" %></th> 
+      <td><%= "#{city.city_count/@like.btns_count.to_f*100}%" %></td> 
+    </tr> 
+    <% end %>
+ 	</table>
+		
+	<div id="piechart"></div>
+
+</div>
+
+<div id="top_list" class="left" >
+	<div id="top_list_arrows" class="verticaltext"> >>>>>>>>>>>>>> </div>
+	<div id="top_list_title">TOP <%= @like.top_10_cities.length %> PLACES</div>
+	<% @like.top_10_cities.each do |city| %>
+	<div class="item"><%= city.city %></div>
+	<% end %>
+	<!-- <div id="circle_in_out"><img src="assets/images/circle_in_out.png"></div> -->
+</div>
+	
+</div>
+
+<% content_for :foot do %>
+<%= javascript_include_tag 'raphael-min', 'pie' %>
+<% end %>

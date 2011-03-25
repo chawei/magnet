@@ -1,6 +1,10 @@
 Magnet::Application.routes.draw do
   
-  resources :lang_mappings
+  resources :lang_mappings do
+    member do
+      get 'detail'
+    end
+  end
 
   resources :like_buttons
   
@@ -14,13 +18,13 @@ Magnet::Application.routes.draw do
     collection do
       get 'count'
       get 'add'
+      get 'latest'
     end
   end
 
   root :to => "home#index"
   
   match "/about", :to => "home#about"
-  match "/detail", :to => "home#detail"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

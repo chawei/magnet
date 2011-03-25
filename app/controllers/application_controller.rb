@@ -3,9 +3,9 @@ class ApplicationController < ActionController::Base
   
   protect_from_forgery
   
-  before_filter :set_counter
+  before_filter :get_latest_log
   
-  helper_method :display_count, :display_update
+  helper_method :display_count, :display_log
   
   def set_counter
     @count = DisablingLog.total_count
@@ -32,8 +32,17 @@ class ApplicationController < ActionController::Base
     return output_html.html_safe
   end
   
-  def display_update()
-    return 'tasjdkljalksj'
+  def display_log(log)
+    last_update_in_words = time_ago_in_words(log.created_at)
+    
+    output_html = ""
+    output_html += "<span id='timestamp'>#{last_update_in_words} ago</span>: "
+    output_html += "<span id='info'>#{@latest_log.location}</span>"
+    return output_html.html_safe
   end
   
+  private
+    def get_latest_log
+      @latest_log = DisablingLog.latest
+    end
 end

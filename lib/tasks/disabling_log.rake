@@ -1,4 +1,4 @@
-namespace :disabling_log do
+namespace :disabling_log do  
   task :set_location => :environment do
     logs = DisablingLog.where("request_ip IS NOT NULL")
     logs.each do |log|

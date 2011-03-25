@@ -9,7 +9,7 @@ namespace :disabling_log do
   end
   
   task :to_lang_mapping => :environment do
-    logs = DisablingLog.where("locale IS NOT NULL")
+    logs = DisablingLog.where("locale IS NOT NULL AND lang_mapping_id IS NULL")
     logs.each do |log|
       lang = LangMapping.find_by_locale(log.locale)
       lang.disabling_logs << log

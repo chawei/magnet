@@ -2,6 +2,7 @@ class DisablingLog < ActiveRecord::Base
   belongs_to :lang_mapping
   
   before_create :set_city_and_country
+  after_create :assign_to_lang_mapping
   
   def self.total_count
     DisablingLog.sum :button_count
@@ -24,5 +25,10 @@ class DisablingLog < ActiveRecord::Base
       self.city = geo.city
       self.country = geo.country
     end
+  end
+  
+  def assign_to_lang_mapping
+    lang = LangMapping.find_by_locale(self.locale)
+    lang.disabling_logs << self
   end
 end

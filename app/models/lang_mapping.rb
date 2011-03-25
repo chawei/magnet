@@ -26,7 +26,7 @@ class LangMapping < ActiveRecord::Base
   end
   
   def btns_count
-    result = LangMapping.select("lang_mappings.*, sum(disabling_logs.button_count) as total_btns_count").joins(:disabling_logs).order("total_btns_count DESC").where(:like_text => self.like_text).where("disabling_logs.city IS NOT NULL").first
+    result = LangMapping.select("lang_mappings.*, sum(disabling_logs.button_count) as total_btns_count").joins(:disabling_logs).order("total_btns_count DESC").where(:like_text => self.like_text).where("disabling_logs.city IS NOT NULL").group(:like_text).first
     return result.total_btns_count.to_i
   end
 end

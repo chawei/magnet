@@ -10,6 +10,6 @@ function getCountNum() {
 function getLatestLog() {
   $.getJSON('/disabling_logs/latest.json', function(data) {
     $('#update').html(data.latest);
-    //$("#timestamp").timeago();
+    $("#timestamp").timeago();
   });
 }

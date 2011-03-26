@@ -33,10 +33,11 @@ class ApplicationController < ActionController::Base
   end
   
   def display_log(log)
+    last_update = log.created_at.iso8601
     last_update_in_words = time_ago_in_words(log.created_at)
     
     output_html = ""
-    output_html += "<span id='timestamp'>#{last_update_in_words} ago</span>: "
+    output_html += "<span id='timestamp' title='#{last_update}'>#{last_update_in_words} ago</span>: "
     output_html += "<span id='info'>#{@latest_log.button_count} Like buttons disabled in #{@latest_log.location}</span>"
     return output_html.html_safe
   end

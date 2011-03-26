@@ -84,16 +84,15 @@ a:hover { color: #99CC00; }
 #main {
 	margin: 50px auto 60px auto;
 	width: 90%;
-	min-width: 1000px;
+	min-width: 950px;
 }
 #content {
-	width: 77%;
-	min-width: 780px;
+	width: 72%;
+	min-width: 600px;
 }
 #top_list {
 	position: relative;
-	width: 20%;
-	min-width: 235px;
+	width: 235px;
 	margin-left: 20px;
 	font-family: "Trade-Gothic-Bold-Con", sans-serif;
 }

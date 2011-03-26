@@ -8,7 +8,7 @@ class DisablingLogsController < ApplicationController
 
     respond_to do |format|
       if @disabling_log.save
-        expire_page :action => :count, :format => :json
+        expire_page :action => :latest, :format => :json
         
         format.html { redirect_to(@disabling_log, :notice => 'Disabling log was successfully created.') }
         format.json { render :json => { :status => 'ok' } }
@@ -80,7 +80,7 @@ class DisablingLogsController < ApplicationController
 
     respond_to do |format|
       if @disabling_log.save
-        expire_page :action => :count, :format => :json
+        expire_page :action => :latest, :format => :json
         
         format.html { redirect_to(@disabling_log, :notice => 'Disabling log was successfully created.') }
         format.xml  { render :xml => @disabling_log, :status => :created, :location => @disabling_log }
@@ -114,7 +114,7 @@ class DisablingLogsController < ApplicationController
     @disabling_log.destroy
     
     respond_to do |format|
-      expire_page :action => :count, :format => :json
+      expire_page :action => :latest, :format => :json
       format.html { redirect_to(disabling_logs_url) }
       format.xml  { head :ok }
     end

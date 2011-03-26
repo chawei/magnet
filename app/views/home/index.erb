@@ -10,7 +10,7 @@
 						<div class="like"><%= link_to like.like_text, detail_lang_mapping_path(like) %></div>
 						<div class="city">
 						  <% like.top_cities.each do |result| %>
-							<div><%= result.city %></div>
+							<div><%= display_location result %></div>
 							<% end %>
 						</div>
 					</div>
@@ -24,7 +24,7 @@
 
 	<div id="top_list" class="left" >
 		<div id="top_list_arrows" class="verticaltext"> >>>>>>>>>>>>>> </div>
-		<div id="top_list_title">TOP <%= @top_langs.length %> LANG</div>
+		<div id="top_list_title">TOP <%= @top_langs.length %> LANGUAGES</div>
 		<% @top_langs.each do |lang| %>
 		<div class="item"><%= lang.lang_name %></div>
 		<% end %>

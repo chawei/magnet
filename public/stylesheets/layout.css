@@ -84,17 +84,17 @@ a:hover { color: #99CC00; }
 #main {
 	margin: 50px auto 60px auto;
 	width: 90%;
-	min-width: 1050px;
+	min-width: 1000px;
 }
 #content {
-	width: 80%;
-	min-width: 820px;
+	width: 77%;
+	min-width: 780px;
 }
 #top_list {
 	position: relative;
-	width: 18%;
+	width: 20%;
+	min-width: 235px;
 	margin-left: 20px;
-	min-width: 180px;
 	font-family: "Trade-Gothic-Bold-Con", sans-serif;
 }
 #top_list_title{
@@ -109,7 +109,7 @@ a:hover { color: #99CC00; }
 #top_list #top_list_arrows {
 	position: absolute;
 	left: -100px;
-	top: 120px;
+	top: 106px;
 }
 #top_list #circle_in_out {
 	margin: 17px 0 0 -4px;

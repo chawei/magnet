@@ -6,7 +6,7 @@ class LangMapping < ActiveRecord::Base
   end
   
   def self.statistics
-    select("lang_mappings.*, count(disabling_logs.id) as logs_count, sum(disabling_logs.button_count) as total_btns_count").joins(:disabling_logs).order("total_btns_count DESC").where("disabling_logs.city IS NOT NULL").group('lang_mappings.like_text')
+    select("lang_mappings.*, count(disabling_logs.id) as logs_count, sum(disabling_logs.button_count) as total_btns_count").joins(:disabling_logs).order("total_btns_count DESC").where("disabling_logs.country IS NOT NULL").group('lang_mappings.like_text')
   end
   
   def self.lang_name_by_locale(locale)
@@ -14,7 +14,7 @@ class LangMapping < ActiveRecord::Base
   end
   
   def top_cities
-    disabling_logs.select("locale, city, country, sum(button_count) as city_count").where("city IS NOT NULL").group(:city).order("city_count DESC")
+    disabling_logs.select("locale, city, country, sum(button_count) as city_count").where("country IS NOT NULL").group(:city).order("city_count DESC")
   end
   
   def top_10_cities
@@ -22,11 +22,11 @@ class LangMapping < ActiveRecord::Base
   end
   
   def top_langs
-    disabling_logs.select("locale, sum(button_count) as locale_count").where("city IS NOT NULL").group(:locale).order("locale_count DESC")
+    disabling_logs.select("locale, sum(button_count) as locale_count").where("country IS NOT NULL").group(:locale).order("locale_count DESC")
   end
   
   def btns_count
-    result = LangMapping.select("lang_mappings.*, sum(disabling_logs.button_count) as total_btns_count").joins(:disabling_logs).order("total_btns_count DESC").where(:like_text => self.like_text).where("disabling_logs.city IS NOT NULL").group(:like_text).first
+    result = LangMapping.select("lang_mappings.*, sum(disabling_logs.button_count) as total_btns_count").joins(:disabling_logs).order("total_btns_count DESC").where(:like_text => self.like_text).where("disabling_logs.country IS NOT NULL").group(:like_text).first
     return result.total_btns_count.to_i
   end
 end

@@ -17,7 +17,7 @@
 	<table id="table-piechart">
 	  <% @like.top_10_cities.each do |city| %>
   	<tr> 
-    	<th><%= "#{city.city} #{city.city_count.to_i}" %></th> 
+    	<th><%= "#{display_location(city)} #{city.city_count.to_i}" %></th> 
       <td><%= "#{city.city_count.to_f/@like.btns_count.to_f*100}%" %></td> 
     </tr> 
     <% end %>
@@ -31,7 +31,7 @@
 	<div id="top_list_arrows" class="verticaltext"> >>>>>>>>>>>>>> </div>
 	<div id="top_list_title">TOP <%= @like.top_10_cities.length %> PLACES</div>
 	<% @like.top_10_cities.each do |city| %>
-	<div class="item"><%= city.city %></div>
+	<div class="item"><%= display_location(city) %></div>
 	<% end %>
 	<!-- <div id="circle_in_out"><img src="assets/images/circle_in_out.png"></div> -->
 </div>

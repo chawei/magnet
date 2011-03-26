@@ -1,5 +1,5 @@
 class DisablingLogsController < ApplicationController
-  caches_page :count
+  caches_page :latest
   
   def add
     return if params[:authenticity_token] != "ogoKH6Gei/sAnYtsK2WIhuFAZVmahD7eBCtrrQswoD4="

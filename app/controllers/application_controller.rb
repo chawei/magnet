@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include ActionView::Helpers::DateHelper
+  include LangMappingsHelper
   
   protect_from_forgery
   
@@ -38,7 +39,7 @@ class ApplicationController < ActionController::Base
     
     output_html = ""
     output_html += "<span id='timestamp' title='#{last_update}'>#{last_update_in_words} ago</span>: "
-    output_html += "<span id='info'>#{@latest_log.button_count} Like buttons disabled in #{@latest_log.location}</span>"
+    output_html += "<span id='info'>#{@latest_log.button_count} Like buttons disabled in #{display_location(@latest_log, true)}</span>"
     return output_html.html_safe
   end
   

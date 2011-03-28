@@ -28,11 +28,13 @@
   
   
   <!-- Javascript starts here -->
-  <%= javascript_include_tag 'jquery.min', 'jquery.timeago', 'rails', 'application' %>
+  <%= javascript_include_tag 'jquery.min', 'jquery.timeago', 'jquery.masonry.min', 'rails', 'application' %>
   
   <script type="text/javascript" charset="utf-8">
     $(function() {
       setInterval("getLatestLog()", 3000);
+      
+      $('#like_boxes').masonry({ columnWidth: 270 });
     });
   </script>
   

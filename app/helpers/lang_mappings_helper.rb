@@ -3,7 +3,7 @@ module LangMappingsHelper
     if [nil, "(null)", 'N/A'].include? result.city
       return Country.country_name_by_code(result.country)
     else
-      return (with_country ? "#{result.city}, #{result.country}" : result.city)
+      return (with_country ? "#{result.city}, #{Country.country_name_by_code(result.country)}" : result.city)
     end
   end
 end

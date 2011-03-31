@@ -12,15 +12,31 @@
 		</div>
 		<div style="margin-top:15px;"><img src="/images/circle_in_out2.png"></div>
 	</div>	
-
 	
-	<table id="table-piechart">
-	  <% @like.top_10_cities.each do |city| %>
-  	<tr> 
-    	<th><%= "#{display_location(city)} #{city.city_count.to_i}" %></th> 
-      <td><%= "#{city.city_count.to_f/@like.btns_count.to_f*100}%" %></td> 
-    </tr> 
+	<table id="table-piechart" class="hidden">
+	  <% if @like.top_cities.length > 10 %>	
+  	  <% total_count = 0 %>
+  	  <% @like.top_9_cities.each do |city| %>
+    	<tr> 
+      	<th><%= "#{display_location(city)} #{city.city_count.to_i}" %></th> 
+        <td><%= "#{city.city_count.to_f/@like.btns_count.to_f*100}%" %></td> 
+      </tr>
+      <% total_count += city.city_count.to_i %>
+      <% end %>
+      <tr>
+        <% remaining_count = @like.btns_count.to_i - total_count %>
+      	<th><%= "Other cities #{remaining_count}" %></th> 
+        <td><%= "#{remaining_count/@like.btns_count.to_f*100}%" %></td>
+      </tr>
+    <% else %>
+      <% @like.top_10_cities.each do |city| %>
+    	<tr> 
+      	<th><%= "#{display_location(city)} #{city.city_count.to_i}" %></th> 
+        <td><%= "#{city.city_count.to_f/@like.btns_count.to_f*100}%" %></td> 
+      </tr>
+      <% end %>
     <% end %>
+    
  	</table>
 		
 	<div id="piechart"></div>
@@ -29,8 +45,8 @@
 
 <div id="top_list" class="left" >
 	<div id="top_list_arrows" class="verticaltext"> >>>>>>>>>>>>>> </div>
-	<div id="top_list_title">TOP <%= @like.top_10_cities.length %> PLACES</div>
-	<% @like.top_10_cities.each do |city| %>
+	<div id="top_list_title">SPOTTED PLACES</div>
+	<% @like.top_cities.each do |city| %>
 	<div class="item"><%= display_location(city, true) %></div>
 	<% end %>
 	<!-- <div id="circle_in_out"><img src="assets/images/circle_in_out.png"></div> -->

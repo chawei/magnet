@@ -12,6 +12,10 @@ class DisablingLog < ActiveRecord::Base
     order('created_at DESC').first
   end
   
+  def self.has_country
+    where("country IS NOT NULL")
+  end
+  
   def location
     return nil if request_ip.blank?
     

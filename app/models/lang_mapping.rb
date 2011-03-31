@@ -53,7 +53,7 @@ class LangMapping < ActiveRecord::Base
               where(:locale => self.locale).
               #where(:like_text => self.like_text).
               each_log_has_country.
-              #group(:like_text).
+              group(:locale).
               first
     return result.total_btns_count.to_i
   end

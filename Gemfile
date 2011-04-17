@@ -2,12 +2,13 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.5'
 
-gem 'mysql2'
+gem 'mysql'
 gem 'jquery-rails', '>= 0.2.6'
 
 gem 'aws-s3', :require => 'aws/s3'
 gem 'paperclip'
 gem 'autometal-geoip'
+gem 'geokit'
 
 gem 'json'
 gem 'nokogiri'

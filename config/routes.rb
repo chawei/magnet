@@ -21,10 +21,15 @@ Magnet::Application.routes.draw do
   end
 
   resources :disabling_logs do
+    member do
+      get 'detail'
+    end
+    
     collection do
       get 'count'
       get 'add'
       get 'latest'
+      get 'latest_logs'
     end
   end
 

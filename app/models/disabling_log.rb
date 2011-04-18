@@ -1,4 +1,6 @@
 class DisablingLog < ActiveRecord::Base
+  include LangMappingsHelper
+  
   belongs_to :lang_mapping
   
   before_create :set_city_and_country
@@ -34,5 +36,25 @@ class DisablingLog < ActiveRecord::Base
   def assign_to_lang_mapping
     lang = LangMapping.find_by_locale(self.locale)
     lang.disabling_logs << self
+  end
+  
+  def exhibition
+    output = {}
+    points = []
+      
+    location = Location.find_coordinates_by_city_and_country(city, country)
+    city_name = display_location(self)
+    point = { 'properties' => { 
+                  'html' => "<div class='marker_count'>#{button_count}</div><div class='marker_city'>#{city_name}</div>" 
+                },
+               "geometry" => {
+                 "coordinates" => [location.lng.to_f, location.lat.to_f],
+                 "type" => "Point"
+               } 
+              }
+    points << point
+    
+    output = { 'like_text' => lang_mapping.like_text, 'btns_count' => button_count, 'points' => points }
+    return output
   end
 end

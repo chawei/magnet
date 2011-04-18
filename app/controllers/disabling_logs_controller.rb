@@ -35,6 +35,28 @@ class DisablingLogsController < ApplicationController
     end
   end
   
+  def latest_logs
+    @links = []
+    logs = DisablingLog.order('created_at DESC').group(:request_ip).limit(10)
+    logs.each do |log|
+      @links << { 'css_id' => "like-#{log.id}",
+                  'like_text' => log.lang_mapping.like_text, 
+                  'locale' => log.locale, 
+                  'btns_count' => log.button_count,
+                  'url' => "#{HOST}/disabling_logs/#{log.id}/detail.json" }
+    end
+    respond_to do |format|
+      format.json  { render :json => @links, :callback => params[:callback] }
+    end
+  end
+  
+  def detail
+    log = DisablingLog.find(params[:id])
+    respond_to do |format|
+      format.json  { render :json => log.exhibition, :callback => params[:callback] }
+    end
+  end
+  
   # GET /disabling_logs
   # GET /disabling_logs.xml
   def index

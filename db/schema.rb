@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110325060655) do
+ActiveRecord::Schema.define(:version => 20110418011616) do
 
   create_table "disabling_logs", :force => true do |t|
     t.string   "title"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(:version => 20110325060655) do
 
   create_table "like_buttons", :force => true do |t|
     t.string   "label"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "city"
+    t.string   "country"
+    t.string   "lng"
+    t.string   "lat"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

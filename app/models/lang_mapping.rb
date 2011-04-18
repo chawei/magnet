@@ -1,4 +1,6 @@
 class LangMapping < ActiveRecord::Base
+  include LangMappingsHelper
+  
   has_many :disabling_logs
   
   def method_missing(meth, *args, &block)
@@ -56,5 +58,32 @@ class LangMapping < ActiveRecord::Base
               group(:locale).
               first
     return result.total_btns_count.to_i
+  end
+  
+  def exhibition
+    output = {}
+    points = []
+    
+    cities = disabling_logs.select("locale, city, country, sum(button_count) as city_count").
+      has_country.
+      group(:city).
+      order("city_count DESC")
+      
+    cities.each do |city|
+      location = Location.find_coordinates_by_city_and_country(city.city, city.country)
+      city_name = display_location(city)
+      point = { 'properties' => { 
+                    'html' => "<div class='marker_count'>#{city.city_count}</div><div class='marker_city'>#{city_name}</div>" 
+                  },
+                 "geometry" => {
+                   "coordinates" => [location.lng.to_f, location.lat.to_f],
+                   "type" => "Point"
+                 } 
+                }
+      points << point
+    end
+    
+    output = { 'like_text' => like_text, 'btns_count' => btns_count, 'points' => points }
+    return output
   end
 end

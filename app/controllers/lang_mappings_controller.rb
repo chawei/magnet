@@ -9,12 +9,28 @@ class LangMappingsController < ApplicationController
       format.xml  { render :xml => @lang_mappings }
     end
   end
+  
+  def links
+    @links = []
+    likes = LangMapping.statistics
+    likes.each do |like|
+      @links << { 'css_id' => "like-#{like.id}",
+                  'like_text' => like.like_text, 
+                  'locale' => like.locale, 
+                  'btns_count' => like.btns_count,
+                  'url' => "#{HOST}/lang_mappings/#{like.id}/detail.json" }
+    end
+    respond_to do |format|
+      format.json  { render :json => @links, :callback => params[:callback] }
+    end
+  end
 
   def detail
     @like = LangMapping.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @like }
+      format.json  { render :json => @like.exhibition, :callback => params[:callback] }
     end
   end
   

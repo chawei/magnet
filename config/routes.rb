@@ -1,8 +1,14 @@
 Magnet::Application.routes.draw do
   
+  resources :locations
+
   resources :lang_mappings do
     member do
       get 'detail'
+    end
+    
+    collection do
+      get 'links'
     end
   end
 

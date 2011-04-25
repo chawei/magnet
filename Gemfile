@@ -11,7 +11,7 @@ gem 'autometal-geoip'
 gem 'geokit'
 
 gem 'json'
-
+gem 'nokogiri'
 gem 'newrelic_rpm'
 
 # Use unicorn as the web server

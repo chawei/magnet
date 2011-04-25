@@ -54,6 +54,7 @@ GEM
     mysql (2.8.1)
     mysql2 (0.2.6)
     newrelic_rpm (2.13.4)
+    nokogiri (1.4.4)
     paperclip (2.3.8)
       activerecord
       activesupport
@@ -100,6 +101,7 @@ DEPENDENCIES
   mysql
   mysql2
   newrelic_rpm
+  nokogiri
   paperclip
   rails (= 3.0.5)
   ruby-debug

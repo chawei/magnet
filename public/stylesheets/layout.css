@@ -206,8 +206,8 @@ a:hover { color: #99CC00; }
 /* Detail Page
 ------------------ */
 #piechart {
-	float: left;
-	margin: -50px 0 0 -20px;
+	/*float: left;*/
+	margin: -50px 0 0 220px;
 }
 #detail_like {
 	float: left;

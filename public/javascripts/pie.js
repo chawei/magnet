@@ -64,6 +64,7 @@ Raphael.fn.pieChart = function (cx, cy, r, values, labels, stroke) {
 };
 
 (function (raphael) {
+    var width = 660;
     $(function () {
         var values = [],
             labels = [];
@@ -72,7 +73,6 @@ Raphael.fn.pieChart = function (cx, cy, r, values, labels, stroke) {
             labels.push($("th", this).text());
         });
         $("table").hide();
-        raphael("piechart", 600, 600).pieChart(300, 300, 170, values, labels, "#fff");
-				
+        raphael("piechart", width, 600).pieChart(width/2, 300, 170, values, labels, "#fff");
     });
 })(Raphael.ninja());

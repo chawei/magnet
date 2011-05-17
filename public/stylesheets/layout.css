@@ -143,9 +143,12 @@ a:hover { color: #99CC00; }
 }
 .like_box .like {
 	font-family: "Trade-Gothic-Bold-Con", sans-serif;
-line-height: 38px;
+  line-height: 40px;
 	font-size: 43px;
 }
+  .like_box .like a {
+    display: block;
+  }
 
 .like_box .city {
 	font-family: "Trade-Gothic-Eig-Con", sans-serif;	

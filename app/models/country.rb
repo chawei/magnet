@@ -287,6 +287,6 @@ class Country
     
   def self.country_name_by_code(code)
     i = CountryCode.index(code)
-    return CountryName[i]
+    return (i.nil? ? "Unknown" : CountryName[i])
   end
 end

@@ -19,7 +19,7 @@ class LangMapping < ActiveRecord::Base
   
   def self.top_list
     select_all_with_total_btns_count.
-    group('lang_mappings.locale')
+    group('lang_mappings.id, lang_mappings.locale')
   end
   
   def self.each_log_has_country
@@ -29,7 +29,7 @@ class LangMapping < ActiveRecord::Base
   def self.statistics
     select_all_with_total_btns_count.
     each_log_has_country.
-    group('lang_mappings.locale, lang_mappings.like_text')
+    group('lang_mappings.id, lang_mappings.locale, lang_mappings.like_text')
   end
   
   def self.lang_name_by_locale(locale)

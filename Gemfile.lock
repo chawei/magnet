@@ -53,6 +53,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mysql (2.8.1)
     mysql2 (0.2.6)
     newrelic_rpm (2.13.4)
     nokogiri (1.4.4)
@@ -103,6 +104,7 @@ DEPENDENCIES
   geokit
   jquery-rails (>= 0.2.6)
   json
+  mysql
   mysql2
   newrelic_rpm
   nokogiri

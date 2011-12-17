@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.5'
 
-gem 'pg'
+gem 'mysql2'
 gem 'thin'
 gem 'jquery-rails', '>= 0.2.6'
 

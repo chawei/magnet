@@ -1,0 +1,1 @@
+GEOIP = GeoIP.new("#{Rails.root}/config/GeoLiteCity.dat")

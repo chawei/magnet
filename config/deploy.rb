@@ -1,4 +1,4 @@
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+require 'bundler/capistrano'
 
 # This will specify the rvm version
 require 'rvm/capistrano'

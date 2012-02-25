@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'rake'
 gem 'rails', '3.2'
 
 gem 'mysql'
@@ -9,17 +8,11 @@ gem 'jquery-rails', '>= 0.2.6'
 
 gem 'aws-s3', :require => 'aws/s3'
 gem 'paperclip'
-gem 'autometal-geoip'
-gem 'geokit'
+gem 'geoip'
 
 gem 'json'
 gem 'nokogiri'
 gem 'newrelic_rpm'
-
-gem 'i18n'
-
-# Use unicorn as the web server
-# gem 'unicorn'
 
 # Deploy with Capistrano
 gem 'capistrano'

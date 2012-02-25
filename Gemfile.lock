@@ -123,6 +123,7 @@ DEPENDENCIES
   aws-s3
   capistrano
   geokit
+  i18n
   jquery-rails (>= 0.2.6)
   json
   mysql

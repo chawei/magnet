@@ -16,6 +16,8 @@ gem 'json'
 gem 'nokogiri'
 gem 'newrelic_rpm'
 
+gem 'i18n'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

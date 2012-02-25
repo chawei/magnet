@@ -4,7 +4,7 @@ require 'bundler/capistrano'
 require 'rvm/capistrano'
 
 set :rvm_type, :system
-set :rvm_ruby_string, 'ruby-1.8.7-p302@magnet' # Defaults to 'default'
+set :rvm_ruby_string, 'ruby-1.9.3-p125@magnet' # Defaults to 'default'
 
 # http://blog.futureshock-ed.com/2009/05/draft-deploying-ruby-on-rails-app-to.html
 

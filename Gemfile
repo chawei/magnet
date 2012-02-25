@@ -10,6 +10,7 @@ gem 'aws-s3', :require => 'aws/s3'
 gem 'paperclip'
 gem 'autometal-geoip'
 gem 'geokit'
+gem 'simplegeo'
 
 gem 'json'
 gem 'nokogiri'
@@ -19,7 +20,7 @@ gem 'newrelic_rpm'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

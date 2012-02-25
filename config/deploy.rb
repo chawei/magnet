@@ -2,7 +2,9 @@ require 'bundler/capistrano'
 
 # This will specify the rvm version
 require 'rvm/capistrano'
-set :rvm_ruby_string, 'ruby-1.8.7-p302' # Defaults to 'default'
+
+set :rvm_type, :system
+set :rvm_ruby_string, 'ruby-1.8.7-p302@magnet' # Defaults to 'default'
 
 # http://blog.futureshock-ed.com/2009/05/draft-deploying-ruby-on-rails-app-to.html
 
@@ -92,7 +94,7 @@ namespace :deploy do
   end
 end
 
-before "deploy:cold", "deploy:create_db"
+#before "deploy:cold", "deploy:create_db"
 
 namespace :db do
   desc "Dumps the #{rails_env} database to db/#{rails_env}_data.sql on the remote server"

@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
+gem 'rails', '3.2'
 
 gem 'mysql'
 gem 'thin'
@@ -10,7 +10,6 @@ gem 'aws-s3', :require => 'aws/s3'
 gem 'paperclip'
 gem 'autometal-geoip'
 gem 'geokit'
-gem 'simplegeo'
 
 gem 'json'
 gem 'nokogiri'
@@ -26,6 +25,6 @@ gem 'capistrano'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
-	gem 'mysql2'
+  gem 'mysql2'
   gem 'ruby-debug'
 end

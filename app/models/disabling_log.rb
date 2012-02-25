@@ -21,15 +21,15 @@ class DisablingLog < ActiveRecord::Base
   def location
     return nil if request_ip.blank?
     
-    geo = GEOIP.city(request_ip)
-    return "#{geo.city_name}, #{geo.country_code2}"
+    geo = Geo.new(request_ip)
+    return "#{geo.city}, #{geo.country}"
   end
   
   def set_city_and_country
     unless request_ip.blank?
-      geo          = GEOIP.city(request_ip)
-      self.city    = geo.city_name
-      self.country = geo.country_code2
+      geo          = Geo.new(request_ip)
+      self.city    = geo.city
+      self.country = geo.country
     end
   end
   

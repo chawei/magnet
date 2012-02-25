@@ -130,5 +130,6 @@ DEPENDENCIES
   nokogiri
   paperclip
   rails (= 3.2)
+  rake
   rvm
   thin
